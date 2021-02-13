@@ -1,5 +1,6 @@
 package lk.ijse.hibernate.business;
 
+import lk.ijse.hibernate.business.custom.impl.CourseBOImpl;
 import lk.ijse.hibernate.business.custom.impl.StudentBOImpl;
 import net.bytebuddy.implementation.bind.annotation.Super;
 
@@ -16,6 +17,8 @@ public class BOFactory {
         switch (boType){
             case STUDENT:
                 return (T) new StudentBOImpl();
+            case COURSE:
+                return (T) new CourseBOImpl();
             default:
                 return null;
         }

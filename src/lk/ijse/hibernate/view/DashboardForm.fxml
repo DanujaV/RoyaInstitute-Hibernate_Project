@@ -34,20 +34,20 @@
                </font>
             </JFXTextArea>
          </children></AnchorPane>
-      <JFXButton buttonType="RAISED" layoutX="335.0" layoutY="10.0" onAction="#btnHomeOnAction" prefHeight="26.0" prefWidth="73.0" style="-fx-background-color: #0093E9;" text="Home" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="277.0" layoutY="10.0" onAction="#btnHomeOnAction" prefHeight="26.0" prefWidth="73.0" style="-fx-background-color: #0093E9;" text="Home" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="415.0" layoutY="10.0" onAction="#btnStudentManagementOnAction" prefHeight="26.0" prefWidth="167.0" text="Student Management" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="358.0" layoutY="10.0" onAction="#btnStudentManagementOnAction" prefHeight="26.0" prefWidth="167.0" text="Student Management" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="579.0" layoutY="10.0" onAction="#btnCourseManagementOnAction" prefHeight="26.0" prefWidth="156.0" text="Course Management" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="521.0" layoutY="10.0" onAction="#btnCourseManagementOnAction" prefHeight="26.0" prefWidth="156.0" text="Course Management" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="727.0" layoutY="10.0" onAction="#btnFindOnAction" prefHeight="26.0" prefWidth="73.0" text="Find" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="740.0" layoutY="10.0" onAction="#btnFindOnAction" prefHeight="26.0" prefWidth="59.0" text="Find" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -57,5 +57,10 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
+      <JFXButton buttonType="RAISED" layoutX="673.0" layoutY="10.0" onAction="#btnRegisterOnAction" prefHeight="26.0" prefWidth="73.0" text="Register" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
    </children>
 </AnchorPane>

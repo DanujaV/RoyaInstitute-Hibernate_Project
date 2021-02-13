@@ -22,7 +22,12 @@ public class DashboardFormController {
             initUi("StudentForm.fxml");
     }
 
-    public void btnCourseManagementOnAction(ActionEvent actionEvent) {
+    public void btnCourseManagementOnAction(ActionEvent actionEvent) throws IOException {
+        initUi("CourseForm.fxml");
+    }
+
+    public void btnRegisterOnAction(ActionEvent actionEvent) throws IOException {
+        initUi("RegistrationForm.fxml");
     }
 
     public void btnFindOnAction(ActionEvent actionEvent) {
@@ -33,4 +38,5 @@ public class DashboardFormController {
 
 
     }
+
 }
