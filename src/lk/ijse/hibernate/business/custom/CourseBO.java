@@ -15,4 +15,8 @@ public interface CourseBO extends SuperBO {
     public boolean delete(String s) throws Exception;
 
     public List<CourseDTO> getAll() throws Exception;
+
+    public CourseDTO find(String s) throws Exception;
+
+    public List<String> getCourseName() throws Exception;
 }

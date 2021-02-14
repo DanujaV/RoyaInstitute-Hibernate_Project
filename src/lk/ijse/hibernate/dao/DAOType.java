@@ -1,5 +1,5 @@
 package lk.ijse.hibernate.dao;
 
 public enum DAOType {
-    STUDENT, COURSE
+    STUDENT, COURSE, REGISTRATION
 }

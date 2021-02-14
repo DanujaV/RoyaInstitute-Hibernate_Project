@@ -63,4 +63,18 @@ public class StudentBOImpl implements StudentBO {
         return dtoList;
 
     }
+
+    @Override
+    public StudentDTO find(String s) throws Exception {
+        Student student = daoImpl.find(s);
+
+        return new StudentDTO(
+                student.getId(),
+                student.getStudentName(),
+                student.getAddress(),
+                student.getContact(),
+                student.getDob(),
+                student.getGender()
+        );
+    }
 }

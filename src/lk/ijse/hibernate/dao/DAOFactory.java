@@ -1,6 +1,7 @@
 package lk.ijse.hibernate.dao;
 
 import lk.ijse.hibernate.dao.custom.impl.CourseDAOImpl;
+import lk.ijse.hibernate.dao.custom.impl.RegistrationDAOImpl;
 import lk.ijse.hibernate.dao.custom.impl.StudentDAOImpl;
 import lk.ijse.hibernate.entity.Student;
 
@@ -21,6 +22,8 @@ public class DAOFactory {
                 return (T) new StudentDAOImpl();
             case COURSE:
                 return (T) new CourseDAOImpl();
+            case REGISTRATION:
+                return (T) new RegistrationDAOImpl();
             default:
                 return null;
         }

@@ -1,6 +1,7 @@
 package lk.ijse.hibernate.util;
 
 import lk.ijse.hibernate.entity.Course;
+import lk.ijse.hibernate.entity.Registration;
 import lk.ijse.hibernate.entity.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -25,7 +26,9 @@ public class FactoryConfiguration {
             /*configuration.setProperties(properties);*/
 
             //build session factory
-             factory = new Configuration().addAnnotatedClass(Student.class).addAnnotatedClass(Course.class)
+             factory = new Configuration().addAnnotatedClass(Student.class)
+                     .addAnnotatedClass(Course.class)
+                     .addAnnotatedClass(Registration.class)
                      .mergeProperties(properties).buildSessionFactory();
         } catch (IOException e) {
             e.printStackTrace();

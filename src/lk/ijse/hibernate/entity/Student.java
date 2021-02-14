@@ -1,7 +1,10 @@
 package lk.ijse.hibernate.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class Student implements SuperEntity{
@@ -12,6 +15,9 @@ public class Student implements SuperEntity{
     private String contact;
     private String dob;
     private String gender;
+
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+    private List<Registration> registration;
 
     public Student() {
     }

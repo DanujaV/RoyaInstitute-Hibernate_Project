@@ -2,8 +2,11 @@ package lk.ijse.hibernate.entity;
 
 import com.sun.istack.Interned;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class Course implements SuperEntity {
@@ -12,6 +15,9 @@ public class Course implements SuperEntity {
     private String courseName;
     private String courseType;
     private String duration;
+
+    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
+    private List<Registration> registration;
 
     public Course() {
     }

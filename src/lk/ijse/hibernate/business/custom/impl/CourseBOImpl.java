@@ -56,4 +56,14 @@ public class CourseBOImpl implements CourseBO {
         }
         return dtoList;
     }
+
+    @Override
+    public CourseDTO find(String s) throws Exception {
+        return null;
+    }
+
+    @Override
+    public List<String> getCourseName() throws Exception {
+        return daoImpl.getCourseName();
+    }
 }

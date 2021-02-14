@@ -1,5 +1,5 @@
 package lk.ijse.hibernate.business;
 
 public enum BOType {
-    STUDENT, COURSE
+    STUDENT, COURSE, REGISTRATION
 }

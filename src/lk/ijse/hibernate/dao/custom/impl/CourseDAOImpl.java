@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CourseDAOImpl implements CourseDAO {
@@ -69,6 +70,19 @@ public class CourseDAOImpl implements CourseDAO {
         transaction.commit();
         session.close();
 
+        return list;
+    }
+
+    @Override
+    public List<String> getCourseName() throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query course = session.createQuery("select courseName from Course");
+        List<String> list = course.list();
+
+        transaction.commit();
+        session.close();
         return list;
     }
 }
