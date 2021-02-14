@@ -48,7 +48,6 @@ public class QueryDAOImpl implements QueryDAO {
             String sGender = String.valueOf(obj[5]);
             studentList.add(new Student(sId, sName, sAddress, sContact, sDob, sGender));
         }
-        //System.out.println(studentList);
         return studentList;
     }
 
