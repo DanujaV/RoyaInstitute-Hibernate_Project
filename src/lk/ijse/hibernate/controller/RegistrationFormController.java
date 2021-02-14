@@ -98,7 +98,12 @@ public class RegistrationFormController {
 
             boolean flag = regBoImpl.save(new RegistrationDTO(regId, date, regFee, studentDTO, courseDTO));
             if (flag) {
-                new Alert(Alert.AlertType.CONFIRMATION,"registerd..!").show();
+                new Alert(Alert.AlertType.CONFIRMATION,"registered..!").show();
+                txtStudentName.setText(null);
+                txtAddress.setText(null);
+                txtStudentId.setText(null);
+                txtRegistrationFee.setText(null);
+                txtRegistrationId.setText(null);
             }
         }catch (NumberFormatException e) {
 
