@@ -4,18 +4,18 @@ public class RegistrationDTO {
     private String regNo;
     private String regDate;
     private double regFee;
-    private String studentId;
-    private String courseCode;
+    private StudentDTO studentDTO;
+    private CourseDTO courseDTO;
 
     public RegistrationDTO() {
     }
 
-    public RegistrationDTO(String regNo, String regDate, double regFee, String studentId, String courseCode) {
+    public RegistrationDTO(String regNo, String regDate, double regFee, StudentDTO studentDTO, CourseDTO courseDTO) {
         this.regNo = regNo;
         this.regDate = regDate;
         this.regFee = regFee;
-        this.studentId = studentId;
-        this.courseCode = courseCode;
+        this.studentDTO = studentDTO;
+        this.courseDTO = courseDTO;
     }
 
     public String getRegNo() {
@@ -42,30 +42,30 @@ public class RegistrationDTO {
         this.regFee = regFee;
     }
 
-    public String getStudentId() {
-        return studentId;
+    public StudentDTO getStudentDTO() {
+        return studentDTO;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public void setStudentDTO(StudentDTO studentDTO) {
+        this.studentDTO = studentDTO;
     }
 
-    public String getCourseCode() {
-        return courseCode;
+    public CourseDTO getCourseDTO() {
+        return courseDTO;
     }
 
-    public void setCourseCode(String courseCode) {
-        this.courseCode = courseCode;
+    public void setCourseDTO(CourseDTO courseDTO) {
+        this.courseDTO = courseDTO;
     }
 
     @Override
     public String toString() {
-        return "RegistrationDTo{" +
+        return "RegistrationDTO{" +
                 "regNo='" + regNo + '\'' +
                 ", regDate='" + regDate + '\'' +
                 ", regFee=" + regFee +
-                ", studentId='" + studentId + '\'' +
-                ", courseCode='" + courseCode + '\'' +
+                ", studentDTO=" + studentDTO +
+                ", courseDTO=" + courseDTO +
                 '}';
     }
 }

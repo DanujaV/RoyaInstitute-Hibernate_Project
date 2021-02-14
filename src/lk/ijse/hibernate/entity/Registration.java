@@ -1,8 +1,8 @@
 package lk.ijse.hibernate.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import sun.awt.X11.XMappingEvent;
+
+import javax.persistence.*;
 
 @Entity
 public class Registration implements SuperEntity{
@@ -10,24 +10,23 @@ public class Registration implements SuperEntity{
     private String regNo;
     private String date;
     private double regFee;
-    private String StudentId;
-    private String courseId;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Student student;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Course course;
+
 
     public Registration() {
     }
 
-    public Registration(String regNo, String date, double regFee, String studentId, String courseId) {
+    public Registration(String regNo, String date, double regFee, Student student, Course course) {
         this.regNo = regNo;
         this.date = date;
         this.regFee = regFee;
-        StudentId = studentId;
-        this.courseId = courseId;
+        this.student = student;
+        this.course = course;
     }
 
     public String getRegNo() {
@@ -54,30 +53,19 @@ public class Registration implements SuperEntity{
         this.regFee = regFee;
     }
 
-    public String getStudentId() {
-        return StudentId;
+    public Student getStudent() {
+        return student;
     }
 
-    public void setStudentId(String studentId) {
-        StudentId = studentId;
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
-    public String getCourseId() {
-        return courseId;
+    public Course getCourse() {
+        return course;
     }
 
-    public void setCourseId(String courseId) {
-        this.courseId = courseId;
-    }
-
-    @Override
-    public String toString() {
-        return "Registration{" +
-                "regNo='" + regNo + '\'' +
-                ", date='" + date + '\'' +
-                ", regFee=" + regFee +
-                ", StudentId='" + StudentId + '\'' +
-                ", courseId='" + courseId + '\'' +
-                '}';
+    public void setCourse(Course course) {
+        this.course = course;
     }
 }
