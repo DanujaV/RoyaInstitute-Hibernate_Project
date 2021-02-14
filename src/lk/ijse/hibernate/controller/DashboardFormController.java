@@ -30,7 +30,8 @@ public class DashboardFormController {
         initUi("RegistrationForm.fxml");
     }
 
-    public void btnFindOnAction(ActionEvent actionEvent) {
+    public void btnFindOnAction(ActionEvent actionEvent) throws IOException {
+        initUi("FindForm.fxml");
     }
     private void initUi(String location) throws IOException {
         this.root.getChildren().clear();
