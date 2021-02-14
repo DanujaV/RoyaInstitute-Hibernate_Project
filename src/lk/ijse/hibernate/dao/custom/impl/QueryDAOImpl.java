@@ -8,7 +8,6 @@ import org.hibernate.Criteria;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.query.NativeQuery;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class QueryDAOImpl implements QueryDAO {
 
         List<Student> resultList = (List<Student>) sql.getResultList();*/
 
-        SQLQuery query = session.createSQLQuery("select id, address, contact, dob, gender, studentName from Student Join Registration on Student.id = Registration.student_id  where course_code = ?1");
+        SQLQuery query = session.createSQLQuery("select id, studentName, address, contact, dob, gender from Student Join Registration on Student.id = Registration.student_id  where course_code = ?1");
         query.setParameter(1, courseId);
         List<Student> resultList = (List<Student>) query.getResultList();
 
