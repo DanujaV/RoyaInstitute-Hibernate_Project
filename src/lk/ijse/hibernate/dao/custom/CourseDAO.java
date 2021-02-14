@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface CourseDAO extends SuperDAO<Course, String> {
     public List<String> getCourseName() throws Exception;
+
 }

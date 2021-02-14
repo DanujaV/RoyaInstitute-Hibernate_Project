@@ -78,11 +78,12 @@ public class CourseDAOImpl implements CourseDAO {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-        Query course = session.createQuery("select courseName from Course");
+        Query course = session.createQuery("select code from Course");
         List<String> list = course.list();
 
         transaction.commit();
         session.close();
         return list;
     }
+
 }

@@ -12,6 +12,8 @@ import lk.ijse.hibernate.business.custom.CourseBO;
 import lk.ijse.hibernate.business.custom.StudentBO;
 import lk.ijse.hibernate.dto.StudentDTO;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class RegistrationFormController {
@@ -31,24 +33,14 @@ public class RegistrationFormController {
     @FXML
     private ComboBox<String> cmbCourse;
 
-  /*  StudentDAOImpl sDaoImpl = DAOFactory.getInstance().getDao(DAOType.STUDENT);*/
     StudentBO bo = BOFactory.getInstance().getBO(BOType.STUDENT);
     CourseBO boCourse = BOFactory.getInstance().getBO(BOType.COURSE);
-
 
     public void initialize(){
         getCourses();
     }
 
     public void getCourses(){
-       /* try {
-            List<String> courseName = boCourse.getCourseName();
-            for (String s : courseName) {
-                System.out.println(s);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
             ArrayList<String> name = (ArrayList<String>) boCourse.getCourseName();
@@ -64,6 +56,14 @@ public class RegistrationFormController {
 
     @FXML
     void btnRegisterOnAction(ActionEvent event) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+
+        String date = dtf.format(now);
+        String regId = txtRegistrationId.getText();
+        String regFee = txtRegistrationFee.getText();
+        String studentID = txtStudentId.getText();
+        String courseCode = String.valueOf(cmbCourse.getValue());
 
     }
 

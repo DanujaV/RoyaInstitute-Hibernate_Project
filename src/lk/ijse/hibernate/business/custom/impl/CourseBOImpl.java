@@ -66,4 +66,5 @@ public class CourseBOImpl implements CourseBO {
     public List<String> getCourseName() throws Exception {
         return daoImpl.getCourseName();
     }
+
 }
